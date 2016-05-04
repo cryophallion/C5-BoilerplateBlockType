@@ -5,8 +5,6 @@ namespace BlockNamespace;
 use Concrete\Core\Block\BlockController;
 use Database;
 
-defined('C5_EXECUTE') or die("Access Denied.");
-
 class Controller extends BlockController
 {
     protected $btInterfaceWidth = 400;
