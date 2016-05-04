@@ -4,7 +4,8 @@ In searching for starting points for blocks, I couldn't find anything for 5.7+, 
 ## Installation
 Copy the folders into a blocks folder for a package. There are a number of placeholder items that a good IDE should allow you to replace globally for the folder:
 
- - `blockHandle` - this is just the main folder for now, but could include other items. 
+ - `block_handle` - this is just the main folder for now, but could include other items. 
+ - `BlockNamespace` - the blocks namespace (this could be in several locations but usually should be in a package's namespace
  - `Block Name` - Normal Block name.
  - `Block Description` - Normal Block Description
  - `BlockTable` - Block Database table name (omitting the bt, this is already included).
