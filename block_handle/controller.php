@@ -41,17 +41,17 @@ class Controller extends BlockController
 
     public function duplicate($newBlockID)
     {
-        $db = Database::get();
+        $db = \Database::connection();
     }
 
     public function save($args)
     {
-        $db = Database::get();
+        $db = \Database::connection();
     }
 
     public function delete()
     {
-        $db = Database::get();
+        $db = \Database::connection();
         $db->delete('btBlockTable', array('bID' => $this->bID));
     }
 
