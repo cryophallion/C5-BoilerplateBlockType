@@ -41,19 +41,23 @@ class Controller extends BlockController
 
     public function duplicate($newBlockID)
     {
-        $db = \Database::connection();
+        $db = $this->getDatabase();
     }
 
     public function save($args)
     {
-        $db = \Database::connection();
+        $db = $this->getDatabase();
     }
 
     public function delete()
     {
-        $db = \Database::connection();
+        $db = $this->getDatabase();
         $db->delete('btBlockTable', array('bID' => $this->bID));
     }
-
+    
+    protected function getDatabase()
+    {
+        return $this->app->make('Concrete\Core\Database\DatabaseManager')->connection();
+    }
 
 }
