@@ -57,7 +57,11 @@ class Controller extends BlockController
     
     protected function getDatabase()
     {
-        return $this->app->make('Concrete\Core\Database\DatabaseManager')->connection();
+        if(!isset($this->db)) {
+            return $this->app->make('Concrete\Core\Database\DatabaseManager')->connection();
+        } else {
+            return $this->db;
+        }
     }
 
 }
